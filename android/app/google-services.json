@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "371032130556",
+    "project_id": "bikerideireland-6f900",
+    "storage_bucket": "bikerideireland-6f900.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371032130556:android:07722e92cc2afc073c2879",
+        "android_client_info": {
+          "package_name": "com.bikerideireland.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlbINkMlq3iIpOOFUis_ymkMI8DmPH3po"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
