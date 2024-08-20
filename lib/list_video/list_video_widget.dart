@@ -52,28 +52,7 @@ class _ListVideoWidgetState extends State<ListVideoWidget> {
                   fontWeight: FontWeight.w500,
                 ),
           ),
-          actions: [
-            Visibility(
-              visible: currentUserEmail == 'loic.ader@gmail.com',
-              child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    context.pushNamed('AddPage');
-                  },
-                  child: const Icon(
-                    Icons.add_circle_outline,
-                    color: Colors.white,
-                    size: 24.0,
-                  ),
-                ),
-              ),
-            ),
-          ],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -171,13 +150,12 @@ class _ListVideoWidgetState extends State<ListVideoWidget> {
                 color: FlutterFlowTheme.of(context).accent4,
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 8.0, 8.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    await launchURL(
-                        'https://www.patreon.com/loicbikerideireland');
+                    context.pushNamed('SupportPage');
                   },
-                  text: 'More videos',
+                  text: 'Support',
                   options: FFButtonOptions(
                     height: 40.0,
                     padding:
@@ -203,9 +181,10 @@ class _ListVideoWidgetState extends State<ListVideoWidget> {
                 padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed('SupportPage');
+                    await launchURL(
+                        'https://www.patreon.com/loicbikerideireland');
                   },
-                  text: 'Support',
+                  text: 'patreon.com/loicbikerideireland',
                   options: FFButtonOptions(
                     height: 40.0,
                     padding:
