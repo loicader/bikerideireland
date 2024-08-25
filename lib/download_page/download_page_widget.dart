@@ -1,13 +1,23 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'download_page_model.dart';
 export 'download_page_model.dart';
 
 class DownloadPageWidget extends StatefulWidget {
-  const DownloadPageWidget({super.key});
+  const DownloadPageWidget({
+    super.key,
+    required this.contentsData,
+  });
+
+  final ContentsRecord? contentsData;
 
   @override
   State<DownloadPageWidget> createState() => _DownloadPageWidgetState();
@@ -22,6 +32,33 @@ class _DownloadPageWidgetState extends State<DownloadPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => DownloadPageModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      _model.downloadedFileName = await actions.downloadFile(
+        valueOrDefault<String>(
+          widget.contentsData?.video,
+          'URL is missing for this video',
+        ),
+      );
+      await showDialog(
+        context: context,
+        builder: (alertDialogContext) {
+          return WebViewAware(
+            child: AlertDialog(
+              title: const Text('Download result'),
+              content: Text(_model.downloadedFileName!),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(alertDialogContext),
+                  child: const Text('Ok'),
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    });
   }
 
   @override
@@ -33,6 +70,8 @@ class _DownloadPageWidgetState extends State<DownloadPageWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -91,7 +130,7 @@ class _DownloadPageWidgetState extends State<DownloadPageWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CircularPercentIndicator(
-                      percent: 0.5,
+                      percent: FFAppState().downloadProgress,
                       radius: 60.0,
                       lineWidth: 12.0,
                       animation: true,
@@ -99,7 +138,7 @@ class _DownloadPageWidgetState extends State<DownloadPageWidget> {
                       progressColor: FlutterFlowTheme.of(context).primary,
                       backgroundColor: FlutterFlowTheme.of(context).accent4,
                       center: Text(
-                        '50%',
+                        FFAppState().downloadProgress.toString(),
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: 'Readex Pro',

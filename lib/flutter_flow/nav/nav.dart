@@ -116,7 +116,15 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'DownloadPage',
           path: '/downloadPage',
-          builder: (context, params) => const DownloadPageWidget(),
+          asyncParams: {
+            'contentsData': getDoc(['contents'], ContentsRecord.fromSnapshot),
+          },
+          builder: (context, params) => DownloadPageWidget(
+            contentsData: params.getParam(
+              'contentsData',
+              ParamType.Document,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

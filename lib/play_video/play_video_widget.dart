@@ -104,7 +104,18 @@ class _PlayVideoWidgetState extends State<PlayVideoWidget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      context.pushNamed('DownloadPage');
+                      context.pushNamed(
+                        'DownloadPage',
+                        queryParameters: {
+                          'contentsData': serializeParam(
+                            widget.contentsData,
+                            ParamType.Document,
+                          ),
+                        }.withoutNulls,
+                        extra: <String, dynamic>{
+                          'contentsData': widget.contentsData,
+                        },
+                      );
                     },
                     text: 'Download',
                     options: FFButtonOptions(
