@@ -143,12 +143,16 @@ class _DownloadPageWidgetState extends State<DownloadPageWidget> {
                   ],
                 ),
               ),
-              Text(
-                'For personal use only',
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Inter',
-                      letterSpacing: 0.0,
-                    ),
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(64.0, 16.0, 64.0, 16.0),
+                child: Text(
+                  'It takes a long time to download, but then you can watch it ad-free :)',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Inter',
+                        letterSpacing: 0.0,
+                      ),
+                ),
               ),
             ],
           ),
