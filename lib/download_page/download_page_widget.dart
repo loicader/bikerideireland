@@ -114,36 +114,30 @@ class _DownloadPageWidgetState extends State<DownloadPageWidget> {
             children: [
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(32.0, 32.0, 32.0, 32.0),
-                child: Text(
-                  'Non-functional. Under development',
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Inter',
-                        fontSize: 16.0,
-                        letterSpacing: 0.0,
-                      ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 32.0, 32.0, 32.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CircularPercentIndicator(
-                      percent: FFAppState().downloadProgress,
-                      radius: 60.0,
-                      lineWidth: 12.0,
-                      animation: true,
-                      animateFromLastPercent: true,
-                      progressColor: FlutterFlowTheme.of(context).primary,
-                      backgroundColor: FlutterFlowTheme.of(context).accent4,
-                      center: Text(
-                        FFAppState().downloadProgress.toString(),
-                        style:
-                            FlutterFlowTheme.of(context).headlineSmall.override(
-                                  fontFamily: 'Readex Pro',
-                                  letterSpacing: 0.0,
-                                ),
+                    Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                      child: CircularPercentIndicator(
+                        percent: FFAppState().downloadProgress,
+                        radius: 60.0,
+                        lineWidth: 12.0,
+                        animation: true,
+                        animateFromLastPercent: true,
+                        progressColor: FlutterFlowTheme.of(context).primary,
+                        backgroundColor: FlutterFlowTheme.of(context).accent4,
+                        center: Text(
+                          FFAppState().downloadProgress.toString(),
+                          style: FlutterFlowTheme.of(context)
+                              .headlineSmall
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                letterSpacing: 0.0,
+                              ),
+                        ),
                       ),
                     ),
                   ],
