@@ -9,6 +9,7 @@ class DownloadPageModel extends FlutterFlowModel<DownloadPageWidget> {
 
   ///  State fields for stateful widgets in this page.
 
+  final unfocusNode = FocusNode();
   // Stores action output result for [Custom Action - downloadFile] action in DownloadPage widget.
   String? downloadedFileName;
 
