@@ -47,14 +47,14 @@ class _ListVideoWidgetState extends State<ListVideoWidget> {
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: 'Readex Pro',
                   color: Colors.white,
-                  fontSize: 20.0,
+                  fontSize: 20,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w500,
                 ),
           ),
           actions: const [],
           centerTitle: true,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -62,16 +62,15 @@ class _ListVideoWidgetState extends State<ListVideoWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                width: MediaQuery.sizeOf(context).width * 1.0,
-                height: 520.0,
+                width: MediaQuery.sizeOf(context).width,
+                height: 520,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                 ),
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0, 0),
                   child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(4.0, 10.0, 4.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(4, 10, 4, 0),
                     child: StreamBuilder<List<ContentsRecord>>(
                       stream: queryContentsRecord(
                         queryBuilder: (contentsRecord) =>
@@ -82,8 +81,8 @@ class _ListVideoWidgetState extends State<ListVideoWidget> {
                         if (!snapshot.hasData) {
                           return Center(
                             child: SizedBox(
-                              width: 50.0,
-                              height: 50.0,
+                              width: 50,
+                              height: 50,
                               child: CircularProgressIndicator(
                                 valueColor: AlwaysStoppedAnimation<Color>(
                                   FlutterFlowTheme.of(context).primary,
@@ -129,7 +128,7 @@ class _ListVideoWidgetState extends State<ListVideoWidget> {
                                       .titleLarge
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        fontSize: 20.0,
+                                        fontSize: 20,
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -146,39 +145,37 @@ class _ListVideoWidgetState extends State<ListVideoWidget> {
                 ),
               ),
               Divider(
-                thickness: 1.0,
+                thickness: 1,
                 color: FlutterFlowTheme.of(context).accent4,
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                 child: FFButtonWidget(
                   onPressed: () async {
                     context.pushNamed('SupportPage');
                   },
                   text: 'Support',
                   options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                    iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    height: 40,
+                    padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Inter',
                           color: Colors.white,
                           letterSpacing: 0.0,
                         ),
-                    elevation: 3.0,
+                    elevation: 3,
                     borderSide: const BorderSide(
                       color: Colors.transparent,
-                      width: 1.0,
+                      width: 1,
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                 child: FFButtonWidget(
                   onPressed: () async {
                     await launchURL(
@@ -186,28 +183,26 @@ class _ListVideoWidgetState extends State<ListVideoWidget> {
                   },
                   text: 'patreon.com/loicbikerideireland',
                   options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                    iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    height: 40,
+                    padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Inter',
                           color: Colors.white,
                           letterSpacing: 0.0,
                         ),
-                    elevation: 3.0,
+                    elevation: 3,
                     borderSide: const BorderSide(
                       color: Colors.transparent,
-                      width: 1.0,
+                      width: 1,
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                 child: FFButtonWidget(
                   onPressed: () async {
                     GoRouter.of(context).prepareAuthEvent();
@@ -218,23 +213,21 @@ class _ListVideoWidgetState extends State<ListVideoWidget> {
                   },
                   text: 'Log Off',
                   options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                    iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    height: 40,
+                    padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Inter',
                           color: Colors.white,
                           letterSpacing: 0.0,
                         ),
-                    elevation: 3.0,
+                    elevation: 3,
                     borderSide: const BorderSide(
                       color: Colors.transparent,
-                      width: 1.0,
+                      width: 1,
                     ),
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
               ),

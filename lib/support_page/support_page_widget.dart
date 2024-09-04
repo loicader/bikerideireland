@@ -42,13 +42,13 @@ class _SupportPageWidgetState extends State<SupportPageWidget> {
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
+            borderRadius: 30,
+            borderWidth: 1,
+            buttonSize: 60,
             icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
-              size: 30.0,
+              size: 30,
             ),
             onPressed: () async {
               context.pop();
@@ -59,13 +59,13 @@ class _SupportPageWidgetState extends State<SupportPageWidget> {
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Readex Pro',
                   color: Colors.white,
-                  fontSize: 20.0,
+                  fontSize: 20,
                   letterSpacing: 0.0,
                 ),
           ),
           actions: const [],
           centerTitle: true,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SafeArea(
           top: true,
@@ -74,23 +74,22 @@ class _SupportPageWidgetState extends State<SupportPageWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0, 0),
                   child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(20.0, 30.0, 20.0, 20.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(20, 30, 20, 20),
                     child: Text(
-                      'The YouTube embed player is very sensitive in full-screen mode.\nThe best solution is to download.\n\nMy 360° videos let you change your point of view at the touch of a fingertip.\nOr better, download and watch in 8K with a good headset.\n\nYou are free to use the downloaded videos for private use only.\nFor professional use, the cost is €19 per video per month.\nPublic services and non-profit organizations can use the videos free of charge.\n\nThis application is Open Source and can be downloaded from https://github.com/loicader/bikerideireland\n\nBecause of the emergence of security problems. Creating a user account is essential to secure access to an application. But nothing prevents us from creating anonymous accounts. Sorry for the click.\n\nContact me: bikerideireland@pm.me\n\nHouba, Houba :)\n\nLoïc',
+                      'The YouTube embed player is very sensitive in full-screen mode.\nThe best solution is to download.\n\nMy 360° videos let you change your point of view at the touch of a fingertip.\nOr better, download and watch in 8K with a good headset.\n\nYou are free to use the downloaded videos for private use only.\nFor professional use, the cost is €19 per video per month.\nPublic services and non-profit organizations can use the videos free of charge.\n\nThis application is Open Source and can be downloaded from https://github.com/loicader/bikerideireland\n\nContact me: bikerideireland@pm.me\n\nHouba, Houba :)\n\nLoïc',
                       textAlign: TextAlign.start,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            fontSize: 18.0,
+                            fontSize: 18,
                             letterSpacing: 0.0,
                           ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -101,11 +100,11 @@ class _SupportPageWidgetState extends State<SupportPageWidget> {
                           'https://creativecommons.org/licenses/by-nc/4.0/');
                     },
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(8),
                       child: Image.asset(
                         'assets/images/CC-by-nc.png',
-                        width: 100.0,
-                        height: 60.0,
+                        width: 100,
+                        height: 60,
                         fit: BoxFit.contain,
                       ),
                     ),

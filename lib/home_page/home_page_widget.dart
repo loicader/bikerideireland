@@ -46,14 +46,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
           title: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0, 0),
             child: Text(
               'Bike Ride Ireland',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).displayMedium.override(
                     fontFamily: 'Readex Pro',
                     color: const Color(0xFF2B6F14),
-                    fontSize: 34.0,
+                    fontSize: 34,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w900,
                   ),
@@ -61,12 +61,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           ),
           actions: const [],
           centerTitle: false,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0, 0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -74,10 +74,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Align(
-                    alignment: const AlignmentDirectional(0.0, -1.0),
+                    alignment: const AlignmentDirectional(0, -1),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
-                          20.0, 40.0, 20.0, 20.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(20, 40, 20, 20),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -87,8 +86,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           context.pushNamed('Login');
                         },
                         child: Container(
-                          width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: MediaQuery.sizeOf(context).width * 1.0,
+                          width: MediaQuery.sizeOf(context).width,
+                          height: MediaQuery.sizeOf(context).width,
                           clipBehavior: Clip.antiAlias,
                           decoration: const BoxDecoration(
                             shape: BoxShape.circle,
@@ -96,7 +95,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           child: Image.asset(
                             'assets/images/HelloSquare.jpg',
                             fit: BoxFit.contain,
-                            alignment: const Alignment(0.0, 0.0),
+                            alignment: const Alignment(0, 0),
                           ),
                         ),
                       ),

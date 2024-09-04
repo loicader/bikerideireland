@@ -82,13 +82,13 @@ class _DownloadPageWidgetState extends State<DownloadPageWidget> {
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
+            borderRadius: 30,
+            borderWidth: 1,
+            buttonSize: 60,
             icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
-              size: 30.0,
+              size: 30,
             ),
             onPressed: () async {
               context.pop();
@@ -99,13 +99,13 @@ class _DownloadPageWidgetState extends State<DownloadPageWidget> {
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Readex Pro',
                   color: Colors.white,
-                  fontSize: 22.0,
+                  fontSize: 22,
                   letterSpacing: 0.0,
                 ),
           ),
           actions: const [],
           centerTitle: true,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SafeArea(
           top: true,
@@ -113,18 +113,17 @@ class _DownloadPageWidgetState extends State<DownloadPageWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 32.0, 32.0, 32.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(32, 32, 32, 32),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                       child: CircularPercentIndicator(
                         percent: FFAppState().downloadProgress,
-                        radius: 60.0,
-                        lineWidth: 12.0,
+                        radius: 60,
+                        lineWidth: 12,
                         animation: true,
                         animateFromLastPercent: true,
                         progressColor: FlutterFlowTheme.of(context).primary,
@@ -144,7 +143,7 @@ class _DownloadPageWidgetState extends State<DownloadPageWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(64.0, 16.0, 64.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(64, 16, 64, 16),
                 child: Text(
                   'It takes a long time to download, but then you can watch it ad-free :)',
                   textAlign: TextAlign.center,

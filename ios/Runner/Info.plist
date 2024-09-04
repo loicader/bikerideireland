@@ -54,7 +54,8 @@
 	<true/>
 
 
-
+	<key>NSDocumentsFolderUsageDescription</key>
+    <string>This permission is necessary if you want to download videos to watch them offline outside the app.</string>
 
 
 	<key>UILaunchStoryboardName</key>

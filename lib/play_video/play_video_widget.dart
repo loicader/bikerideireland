@@ -50,13 +50,13 @@ class _PlayVideoWidgetState extends State<PlayVideoWidget> {
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
+            borderRadius: 30,
+            borderWidth: 1,
+            buttonSize: 60,
             icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
-              size: 30.0,
+              size: 30,
             ),
             onPressed: () async {
               context.pop();
@@ -70,14 +70,14 @@ class _PlayVideoWidgetState extends State<PlayVideoWidget> {
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Readex Pro',
                   color: Colors.white,
-                  fontSize: 20.0,
+                  fontSize: 20,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w500,
                 ),
           ),
           actions: const [],
           centerTitle: true,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SafeArea(
           top: true,
@@ -86,22 +86,22 @@ class _PlayVideoWidgetState extends State<PlayVideoWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Divider(
-                  thickness: 1.0,
+                  thickness: 1,
                   color: FlutterFlowTheme.of(context).accent4,
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0, 0),
                   child: FlutterFlowWebView(
                     content: widget.contentsData!.youtube,
-                    width: 392.0,
-                    height: 233.0,
+                    width: 392,
+                    height: 233,
                     verticalScroll: false,
                     horizontalScroll: false,
                     html: true,
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed(
@@ -119,11 +119,9 @@ class _PlayVideoWidgetState extends State<PlayVideoWidget> {
                     },
                     text: 'Download',
                     options: FFButtonOptions(
-                      height: 40.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      height: 40,
+                      padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -131,28 +129,26 @@ class _PlayVideoWidgetState extends State<PlayVideoWidget> {
                                 color: Colors.white,
                                 letterSpacing: 0.0,
                               ),
-                      elevation: 3.0,
+                      elevation: 3,
                       borderSide: const BorderSide(
                         color: Colors.transparent,
-                        width: 1.0,
+                        width: 1,
                       ),
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed('SupportPage');
                     },
                     text: 'Support',
                     options: FFButtonOptions(
-                      height: 40.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      height: 40,
+                      padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -160,17 +156,17 @@ class _PlayVideoWidgetState extends State<PlayVideoWidget> {
                                 color: Colors.white,
                                 letterSpacing: 0.0,
                               ),
-                      elevation: 3.0,
+                      elevation: 3,
                       borderSide: const BorderSide(
                         color: Colors.transparent,
-                        width: 1.0,
+                        width: 1,
                       ),
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
                   child: FFButtonWidget(
                     onPressed: () async {
                       await launchURL(
@@ -178,11 +174,9 @@ class _PlayVideoWidgetState extends State<PlayVideoWidget> {
                     },
                     text: 'patreon.com/loicbikerideireland',
                     options: FFButtonOptions(
-                      height: 40.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      height: 40,
+                      padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -190,12 +184,12 @@ class _PlayVideoWidgetState extends State<PlayVideoWidget> {
                                 color: Colors.white,
                                 letterSpacing: 0.0,
                               ),
-                      elevation: 3.0,
+                      elevation: 3,
                       borderSide: const BorderSide(
                         color: Colors.transparent,
-                        width: 1.0,
+                        width: 1,
                       ),
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                 ),
