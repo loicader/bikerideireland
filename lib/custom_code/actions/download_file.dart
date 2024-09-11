@@ -24,20 +24,29 @@ Future<String?> downloadFile(String? url) async {
   debugPrint("Dio intialized");
   try {
     // Get the download directory path
-    String appDocPath = ".";
+    String dlPath = ".";
     if (!kIsWeb) {
-      Directory appDocDir = await getApplicationDocumentsDirectory();
-      appDocPath = appDocDir.path;
+      // Default to application directory if no downloads directory available
+      Directory dlDir = await getApplicationDocumentsDirectory();
+      Directory? maybeDlDir = await getDownloadsDirectory();
+      if (maybeDlDir != null) {
+        dlDir = maybeDlDir;
+      }
+      dlPath = dlDir.path;
     }
-    debugPrint("appDocPath: $appDocPath");
+    debugPrint("dlPath: $dlPath");
 
     // Generate a unique file name
+    /*
     String timestamp = DateTime.now().millisecondsSinceEpoch.toString();
     String fileName = 'video_$timestamp.$extension';
+    */
+    // Keep filename from the URL
+    String fileName = url.split("/").last;
     debugPrint("fileName: $fileName");
 
     // Create the file path
-    String filePath = '$appDocPath/$fileName';
+    String filePath = '$dlPath/$fileName';
     debugPrint("filePath: $filePath");
 
 /*
@@ -60,7 +69,7 @@ Future<String?> downloadFile(String? url) async {
     final response =
         await dio.download(url, filePath, onReceiveProgress: (received, total) {
       if (total <= 0) return;
-      FFAppState().downloadProgress = received / total;
+      FFAppState().downloadProgress = 100 * received / total;
     });
     debugPrint("downloaded: $filePath -> $response");
 

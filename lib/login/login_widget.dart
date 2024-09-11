@@ -46,13 +46,13 @@ class _LoginWidgetState extends State<LoginWidget> {
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Readex Pro',
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 20.0,
                   letterSpacing: 0.0,
                 ),
           ),
           actions: const [],
           centerTitle: true,
-          elevation: 2,
+          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
@@ -62,28 +62,28 @@ class _LoginWidgetState extends State<LoginWidget> {
               Expanded(
                 flex: 8,
                 child: Container(
-                  width: 100,
+                  width: 100.0,
                   height: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
-                  alignment: const AlignmentDirectional(0, -1),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0, 0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsets.all(32),
+                            padding: const EdgeInsets.all(32.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0, 32, 0, 16),
+                                      0.0, 32.0, 0.0, 16.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       GoRouter.of(context).prepareAuthEvent();
@@ -98,13 +98,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     },
                                     text: 'Anonymous Sign In',
                                     options: FFButtonOptions(
-                                      width: 370,
-                                      height: 44,
+                                      width: 370.0,
+                                      height: 44.0,
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 0, 0),
+                                          0.0, 0.0, 0.0, 0.0),
                                       iconPadding:
                                           const EdgeInsetsDirectional.fromSTEB(
-                                              0, 0, 0, 0),
+                                              0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
                                       textStyle: FlutterFlowTheme.of(context)
@@ -114,12 +114,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             color: Colors.white,
                                             letterSpacing: 0.0,
                                           ),
-                                      elevation: 3,
+                                      elevation: 3.0,
                                       borderSide: const BorderSide(
                                         color: Colors.transparent,
-                                        width: 1,
+                                        width: 1.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(12.0),
                                     ),
                                   ),
                                 ),
@@ -128,15 +128,16 @@ class _LoginWidgetState extends State<LoginWidget> {
                           ),
                         ),
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(32, 16, 32, 32),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              32.0, 16.0, 32.0, 32.0),
                           child: Text(
-                            'Unfortunately, the creation of a user account has now become essential to secure access to an application. But nothing prevents us from creating anonymous accounts. Sorry for the click that complicates the interface.',
+                            'Unfortunately, the creation of a user account has now become essential to secure access to an application.\nBut nothing prevents us from creating anonymous accounts :)',
+                            textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Inter',
-                                  fontSize: 16,
+                                  fontSize: 18.0,
                                   letterSpacing: 0.0,
                                 ),
                           ),

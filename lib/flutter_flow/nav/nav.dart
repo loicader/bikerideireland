@@ -125,6 +125,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.Document,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'ProfessionalPage',
+          path: '/professionalPage',
+          builder: (context, params) => const ProfessionalPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
